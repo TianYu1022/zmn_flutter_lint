@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zmn_flutter_lint/test_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/testPage': (context) => const TestPage(),
+      },
     );
   }
 }
